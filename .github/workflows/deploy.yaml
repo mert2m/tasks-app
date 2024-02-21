@@ -21,7 +21,7 @@ jobs:
       - name: Load Docker image
         run: |
           kubectl apply -f kind-config.yaml
-          kind load docker-image merttpolat/tasks-app:latest
+          kind load docker-image merttpolat/tasks-app
       - name: Deploy to Kubernetes
         run: |
-          kubectl apply -f deployment.yaml
+          kubectl apply -f tasks-app-deployment.yaml
